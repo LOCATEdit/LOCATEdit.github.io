@@ -154,79 +154,69 @@
   </div>
 </section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
+<!-- Image carousel -->
+<section class="hero is-small">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2>
+        <div class="container">
+            <div id="results-carousel" class="carousel results-carousel">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="static/images/carousel/carousel1.png" alt="carousel1" />
+                    </div>
+                    <div class="card-content has-text-centered">A small cactus with a happy face in the Sahara
+                        desert.</div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="static/images/carousel/carousel2.png" alt="carousel2" />
+                    </div>
+                    <div class="card-content has-text-centered">A alpaca made of colorful building blocks,
+                        cyberpunk.</div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="static/images/carousel/carousel3.png" alt="carousel3" />
+                    </div>
+                    <div class="card-content has-text-centered">Real beautiful woman.</div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="static/images/carousel/carousel4.png" alt="carousel4" />
+                    </div>
+                    <div class="card-content has-text-centered">Luffy from ONEPIECE, handsome face, fantasy.</div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="static/images/carousel/carousel5.png" alt="carousel5" />
+                    </div>
+                    <div class="card-content has-text-centered">Poster of a mechanical cat, techical Schematics
+                        viewed from front.</div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="static/images/carousel/carousel6.png" alt="carousel6" />
+                    </div>
+                    <div class="card-content has-text-centered">Nature vs human nature, surreal, UHD, 8k, hyper
+                        details, rich colors, photograph.</div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="static/images/carousel/carousel7.png" alt="carousel7" />
+                    </div>
+                    <div class="card-content has-text-centered">artistic</div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="static/images/carousel/carousel8.png" alt="carousel8" />
+                    </div>
+                    <div class="card-content has-text-centered">Bright scene, aerial view,ancient city, fantasy,
+                        gorgeous light, mirror reflection, high detail, wide angle lens.</div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
-
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- End image carousel -->
 
 
 <section class="section">
@@ -237,31 +227,17 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Text-guided image editing aims to modify specific regions of an image according to natural language 
+            instructions while maintaining the general structure and the background fidelity. Existing methods 
+            utilize masks derived from cross-attention maps generated from diffusion models to identify 
+            the target regions for modification. However, since cross-attention mechanisms focus on semantic relevance, 
+            they struggle to maintain the image integrity. As a result, these methods often lack spatial consistency, 
+            leading to editing artifacts and distortions.  In this work, we address these limitations and introduce 
+            LOCATEdit, which enhances cross-attention maps through a graph-based approach utilizing 
+            self-attention-derived patch relationships to maintain smooth, coherent attention across image regions, 
+            ensuring that alterations are limited to the designated items while retaining the surrounding structure. 
+            LOCATEdit consistently and substantially outperforms existing baselines on PIE-Bench, demonstrating 
+            its state-of-the-art performance and effectiveness on various editing tasks.
           </p>
         </div>
       </div>
@@ -269,15 +245,15 @@
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
+<!--     <div class="columns is-centered has-text-centered"> -->
+<!--       <div class="column is-four-fifths"> -->
+<!--         <h2 class="title is-3">Video</h2> -->
+<!--         <div class="publication-video"> -->
+<!--           <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0" -->
+<!--                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+<!--         </div> -->
+<!--       </div> -->
+<!--     </div> -->
     <!--/ Paper video. -->
   </div>
 </section>
