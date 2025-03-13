@@ -25,20 +25,32 @@
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
 
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <!-- <link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
+  <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script> -->
+
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./assets/css/juxtapose.css">
+  <link rel="stylesheet" href="./assets/css/image_card_fader.css">
+  <link rel="stylesheet" href="./assets/css/image_card_slider.css">
+  <link rel="stylesheet" href="./assets/css/tab_gallery.css">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/locatedit.svg">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="icon" href="static/images/locatedit.svg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="./assets/js/popper.min.js"></script>
+  <!-- <script src="./assets/js/jquery.min.js"></script> -->
+  <script src="./assets/js/bootstrap.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script src="static/js/juxtapose.js"></script>
 </head>
 <body>
 
@@ -154,125 +166,96 @@
   </div>
 </section>
 
-<!-- Combined Carousel & Juxtapose Slider Section -->
+<!-- Carousel with Image Pairs on Each Slide -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <!-- Carousel container (using your carousel library) -->
+      <!-- Carousel container -->
       <div id="results-carousel" class="carousel results-carousel">
       
-        <!-- Slide 1: Juxtapose slider with two images -->
+        <!-- Slide 1: Image pair (example: snowy vs clear road) -->
         <div class="card">
           <div class="card-content">
-            <div class="tab_container">
-              <div id="juxtapose-embed1" data-startingposition="50%" data-animate="true" class="juxtapose">
-                <div class="jx-slider">
-                  <!-- Handle -->
-                  <div class="jx-handle" style="left: 50%;">
-                    <div class="jx-arrow jx-left"></div>
-                    <div class="jx-control">
-                      <div class="jx-controller" tabindex="0" role="slider"
-                           aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <div class="jx-arrow jx-right"></div>
-                  </div>
-                  <!-- Left Image -->
-                  <div class="jx-image jx-left" style="width: 50%;">
-                    <img src="static/images/carousel/snowy_road.png" alt="Left Image Slide 1">
-                  </div>
-                  <!-- Right Image -->
-                  <div class="jx-image jx-right" style="width: 50%;">
-                    <img src="static/images/carousel/Normal_road.png" alt="Right Image Slide 1">
-                  </div>
-                </div>
+            <div class="columns is-vcentered">
+              <!-- Left Image -->
+              <div class="column is-half has-text-centered">
+                <figure class="image">
+                  <img src="./static/images/carousel/snowy_road.png" alt="Snowy Road">
+                </figure>
+              </div>
+              <!-- Right Image -->
+              <div class="column is-half has-text-centered">
+                <figure class="image">
+                  <img src="./static/images/carousel/Normal_road.png" alt="Clear Road">
+                </figure>
               </div>
             </div>
           </div>
-          <!-- Caption or description -->
+          <!-- Caption for the pair -->
           <div class="card-footer">
             <div class="card-footer-item has-text-centered">
-              <p>Stop Sign on snowy road vs stop sign on clear road</p>
+              <p>Stop Sign on snowy road vs Stop Sign on clear road</p>
             </div>
           </div>
         </div>
         
-        <!-- Slide 2: Another slider instance -->
+        <!-- Slide 2: Another image pair (example: cat with different hats) -->
         <div class="card">
           <div class="card-content">
-            <div class="tab_container">
-              <div id="juxtapose-embed2" data-startingposition="50%" data-animate="true" class="juxtapose">
-                <div class="jx-slider">
-                  <!-- Handle -->
-                  <div class="jx-handle" style="left: 50%;">
-                    <div class="jx-arrow jx-left"></div>
-                    <div class="jx-control">
-                      <div class="jx-controller" tabindex="0" role="slider"
-                           aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <div class="jx-arrow jx-right"></div>
-                  </div>
-                  <!-- Left Image -->
-                  <div class="jx-image jx-left" style="width: 50%;">
-                    <img src="static/images/carousel/cal_black_hat.png" alt="Left Image Slide 2">
-                  </div>
-                  <!-- Right Image -->
-                  <div class="jx-image jx-right" style="width: 50%;">
-                    <img src="static/images/carousel/cat_golden_hat.png" alt="Right Image Slide 2">
-                  </div>
-                </div>
+            <div class="columns is-vcentered">
+              <!-- Left Image -->
+              <div class="column is-half has-text-centered">
+                <figure class="image">
+                  <img src="./static/images/carousel/cat_black_hat.png" alt="Cat with Black Hat">
+                </figure>
+              </div>
+              <!-- Right Image -->
+              <div class="column is-half has-text-centered">
+                <figure class="image">
+                  <img src="./static/images/carousel/cat_golden_hat.png" alt="Cat with Golden Hat">
+                </figure>
               </div>
             </div>
           </div>
-          <!-- Caption or description -->
+          <!-- Caption for the pair -->
           <div class="card-footer">
             <div class="card-footer-item has-text-centered">
-              <p>A cat wearing a black hat vs golden hat</p>
+              <p>A cat wearing a black hat vs a cat wearing a golden hat</p>
             </div>
           </div>
         </div>
         
-        <!-- Additional slides can be added following the same structure -->
-        <!-- Slide 2: Another slider instance -->
+        <!-- Slide 3: Additional image pair (example: withered vs blooming rose) -->
         <div class="card">
           <div class="card-content">
-            <div class="tab_container">
-              <div id="juxtapose-embed2" data-startingposition="50%" data-animate="true" class="juxtapose">
-                <div class="jx-slider">
-                  <!-- Handle -->
-                  <div class="jx-handle" style="left: 50%;">
-                    <div class="jx-arrow jx-left"></div>
-                    <div class="jx-control">
-                      <div class="jx-controller" tabindex="0" role="slider"
-                           aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <div class="jx-arrow jx-right"></div>
-                  </div>
-                  <!-- Left Image -->
-                  <div class="jx-image jx-left" style="width: 50%;">
-                    <img src="static/images/carousel/withered_rose.png" alt="Left Image Slide 2">
-                  </div>
-                  <!-- Right Image -->
-                  <div class="jx-image jx-right" style="width: 50%;">
-                    <img src="static/images/carousel/blooming_rose.png" alt="Right Image Slide 2">
-                  </div>
-                </div>
+            <div class="columns is-vcentered">
+              <!-- Left Image -->
+              <div class="column is-half has-text-centered">
+                <figure class="image">
+                  <img src="./static/images/carousel/withered_rose.png" alt="Withered Rose">
+                </figure>
+              </div>
+              <!-- Right Image -->
+              <div class="column is-half has-text-centered">
+                <figure class="image">
+                  <img src="./static/images/carousel/blooming_rose.png" alt="Blooming Rose">
+                </figure>
               </div>
             </div>
           </div>
-          <!-- Caption or description -->
+          <!-- Caption for the pair -->
           <div class="card-footer">
             <div class="card-footer-item has-text-centered">
-              <p>Withered rose in nature vs blooming rose</p>
+              <p>Withered rose in nature vs Blooming rose</p>
             </div>
           </div>
         </div>
-        <!-- ... -->
         
       </div>
     </div>
   </div>
 </section>
-<!-- End image carousel -->
+
 
 
 <section class="section">
@@ -319,37 +302,51 @@
   <div class="container is-max-desktop">
 
     <!-- Methods Section -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Methods</h2>
-        <div class="content has-text-justified">
-          <p>
-            Our proposed method leverages a novel neural framework to enhance video generation by incorporating consistency models.
-            By progressively refining video frames through diffusion-based conditioning and latent space constraints, our approach 
-            ensures improved temporal coherence while maintaining high-quality frame details.
-          </p>
-        </div>
-
-        <!-- Framework Images -->
-        <div class="columns is-centered">
-          <div class="column is-half has-text-centered">
-            <img src="./static/images/framework_1.png" 
-                 class="method-image"
-                 alt="Framework Diagram 1" 
-                 width="100%">
-            <p>Framework Overview</p>
-          </div>
-          <div class="column is-half has-text-centered">
-            <img src="./static/images/framework_2.png" 
-                 class="method-image"
-                 alt="Framework Diagram 2" 
-                 width="100%">
-            <p>Training Process</p>
-          </div>
-        </div>
-        
+  <div class="columns is-centered">
+    <div class="column is-full-width">
+      <h2 class="title is-3">Methods</h2>
+      <div class="content has-text-justified">
+        <p>
+          LOCATEdit introduces a novel approach to text-guided image editing 
+          by optimizing cross-attention maps using a Graph Laplacian-based framework. 
+          Our method first extracts cross-attention and self-attention maps, 
+          then constructs the Cross and Self-Attention (CASA) graph, capturing 
+          relationships between image patches based on self-attention weights. 
+          The CASA graph encodes spatial relationships, enforcing smoothness and 
+          coherence across semantically related regions. During editing, the 
+          optimized cross-attention maps, guided by the CASA graph structure, 
+          ensure localized modifications aligned precisely with text instructions, 
+          preserving image fidelity and preventing unwanted distortions. 
+          The complete pipeline involves computing attention maps, forming the 
+          CASA graph from self-attention relationships, and applying graph 
+          Laplacian optimization to enhance the editing quality.
+        </p>
       </div>
+
+      <!-- Framework Images (Stacked Layout) -->
+      <div class="columns is-centered">
+        <div class="column is-full-width has-text-centered">
+          <img src="./static/images/framework_1.png" 
+              class="method-image"
+              alt="Framework Diagram 1" 
+              width="100%">
+          <p>Framework Overview</p>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-full-width has-text-centered">
+          <img src="./static/images/framework_2.png" 
+              class="method-image"
+              alt="Framework Diagram 2" 
+              width="100%">
+          <p>CASA graph</p>
+        </div>
+      </div>
+
     </div>
+  </div>
+
     <!--/ Methods Section -->
     
     <!-- Concurrent Work. -->
@@ -427,6 +424,15 @@
     </div>
   </div>
 </footer>
+
+  <script src="./assets/js/juxtapose.js"></script>
+  <script src="./assets/js/popper.min.js"></script>
+  <script src="./assets/js/jquery.min.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+  <!-- <script defer="" src="./assets/js/fontawesome.all.min.js"></script> -->
+  <script src="./assets/js/bulma-carousel.min.js"></script>
+  <script src="./assets/js/bulma-slider.min.js"></script>
+  <script src="./assets/js/magnifier.js"></script>
 
 </body>
 </html>
